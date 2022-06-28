@@ -16,14 +16,14 @@ List.destroy_all
 puts "old records destroyed"
 puts "creating lists"
 
-school_list = List.new(title: "School", description: "Homework and test preparations")
-home_list = List.new(title: "Home", description: "All my chores")
-work_list = List.new(title: "Work", description: "Work related business")
+school_list = List.create(title: "School", description: "Homework and test preparations")
+home_list = List.create(title: "Home", description: "All my chores")
+work_list = List.create(title: "Work", description: "Work related business")
 
 puts "lists created"
 puts "creating tasks"
 
-Task.new(
+Task.create(
   list_id: school_list.id,
   title: "Math homework",
   description: "Probabilities",
@@ -32,7 +32,7 @@ Task.new(
   address: "home"
 )
 
-Task.new(
+Task.create(
   list_id: school_list.id,
   title: "English test",
   description: "Read Romeo and Juliet",
@@ -41,7 +41,7 @@ Task.new(
   address: "home"
 )
 
-Task.new(
+Task.create(
   list_id: school_list.id,
   title: "Group work",
   description: "IT dissertation",
@@ -50,7 +50,7 @@ Task.new(
   address: "Jack's place"
 )
 
-Task.new(
+Task.create(
   list_id: home_list.id,
   title: "Laundry",
   description: "Too much dirty clothes",
@@ -59,7 +59,7 @@ Task.new(
   address: "home"
 )
 
-Task.new(
+Task.create(
   list_id: home_list.id,
   title: "Cleaning",
   description: "House has a lot of dust already",
@@ -68,7 +68,7 @@ Task.new(
   address: "home"
 )
 
-Task.new(
+Task.create(
   list_id: work_list.id,
   title: "Meating",
   description: "Boss wants to talk",
@@ -77,7 +77,7 @@ Task.new(
   address: "office"
 )
 
-Task.new(
+Task.create(
   list_id: work_list.id,
   title: "Matt's project",
   description: "Deadline next week",
