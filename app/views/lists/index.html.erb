@@ -1,8 +1,10 @@
 <h1>My lists</h1>
 
 <% @lists.each do |list| %>
-  <div class = "list-card">
-    <p><%= list.title %></p>
-    <p><%= list.description %></p>
+  <div class = "list-display">
+    <div class = "list-card">
+      <p><%= list.title %></p>
+      <p><%= list.description %></p>
+    </div>
   </div>
 <% end %>
