@@ -3,7 +3,7 @@
 <% @lists.each do |list| %>
   <div class = "list-display">
     <div class = "list-card">
-      <p><%= list.title %></p>
+      <p><%= link_to list.title, list_path(list) %></p>
       <p><%= list.description %></p>
     </div>
   </div>
