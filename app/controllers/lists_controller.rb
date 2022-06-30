@@ -1,5 +1,5 @@
 class ListsController < ApplicationController
-  before_action :set_list, only: [:show, :edit, :update]
+  before_action :set_list, only: [:show, :edit, :update, :destroy]
   def index
     @lists = List.all
   end
@@ -28,6 +28,12 @@ class ListsController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def destroy
+    @list.destroy
+
+    redirect_to lists_path, notice: "#{@list.title} was successfully deleted."
   end
 
   private
