@@ -3,7 +3,7 @@
 <% @list.tasks.each do |task| %>
   <div class = "task-display">
     <div class = "task-card">
-      <p><%= task.title %></p>
+      <p><%= link_to task.title, list_task_path(task) %></p>
       <p><%= task.description %></p>
     </div>
   </div>
