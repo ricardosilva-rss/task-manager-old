@@ -23,8 +23,7 @@ work_list = List.create(title: "Work", description: "Work related business")
 puts "lists created"
 puts "creating tasks"
 
-Task.create(
-  list_id: school_list.id,
+school_list.tasks.create(
   title: "Math homework",
   description: "Probabilities",
   start_date: DateTime.new(2022, 7, 2, 16, 0),
@@ -32,8 +31,7 @@ Task.create(
   address: "home"
 )
 
-Task.create(
-  list_id: school_list.id,
+school_list.tasks.create(
   title: "English test",
   description: "Read Romeo and Juliet",
   start_date: DateTime.new(2022, 7, 5, 10, 0),
@@ -41,8 +39,7 @@ Task.create(
   address: "home"
 )
 
-Task.create(
-  list_id: school_list.id,
+school_list.tasks.create(
   title: "Group work",
   description: "IT dissertation",
   start_date: DateTime.new(2022, 7, 6, 14, 0),
@@ -50,8 +47,7 @@ Task.create(
   address: "Jack's place"
 )
 
-Task.create(
-  list_id: home_list.id,
+home_list.tasks.create(
   title: "Laundry",
   description: "Too much dirty clothes",
   start_date: DateTime.new(2022, 7, 2, 10, 0),
@@ -59,8 +55,7 @@ Task.create(
   address: "home"
 )
 
-Task.create(
-  list_id: home_list.id,
+home_list.tasks.create(
   title: "Cleaning",
   description: "House has a lot of dust already",
   start_date: DateTime.new(2022, 7, 3, 11, 0),
@@ -68,8 +63,7 @@ Task.create(
   address: "home"
 )
 
-Task.create(
-  list_id: work_list.id,
+work_list.tasks.create(
   title: "Meating",
   description: "Boss wants to talk",
   start_date: DateTime.new(2022, 7, 12, 11, 0),
@@ -77,8 +71,7 @@ Task.create(
   address: "office"
 )
 
-Task.create(
-  list_id: work_list.id,
+work_list.tasks.create(
   title: "Matt's project",
   description: "Deadline next week",
   start_date: DateTime.new(2022, 7, 13, 10, 0),
