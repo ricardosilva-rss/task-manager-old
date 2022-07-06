@@ -9,7 +9,7 @@
   </div>
 <% end %>
 
-<%= link_to 'New Task', new_list_task_path %>
+<%= link_to 'New Task', new_list_task_path(@list) %>
 
 <%= link_to 'Edit List', edit_list_path %>
 <%= link_to 'Delete List', list_path(@list), method: :delete, data: { confirm: "Are you sure?" } %>

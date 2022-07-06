@@ -1,11 +1,10 @@
 class TasksController < ApplicationController
-  before_action :set_task, only: [:show, :new]
+  before_action :set_task, only: [:show]
 
   def show; end
 
   def new
     @task = Task.new
-    @task.list_id = @list.id
   end
 
   def create
@@ -14,7 +13,7 @@ class TasksController < ApplicationController
     @task = @list.save
 
     if @task.save
-      redirect_to list_path(@list), notice: 'List was successfully created.'
+      redirect_to list_path(@list), notice: 'Task was successfully created.'
     else
       render :new
     end
